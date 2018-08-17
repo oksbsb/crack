@@ -8,7 +8,7 @@ go build main.go </br>
 
 ## help
 
-'''
+```
 ➜  crack ./main --help
 
   -P string
@@ -23,7 +23,8 @@ go build main.go </br>
         service ssh，smb，mssql，mysql
   -t int
         thread (default 100)
-'''
+
+```
 
 ./main -i 192.168.1.1/24 -p 22 -U /tmp/user.txt -P /tmp/pass.txt  -s ssh</br>
 
