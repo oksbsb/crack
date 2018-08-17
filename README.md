@@ -2,27 +2,27 @@
 
 ## Install
 
-git clone  https://github.com/yanweijin/crack
+git clone  https://github.com/yanweijin/crack</br>
 
-go build main.go 
+go build main.go </br>
 
 ## help
 
-./main --help
-  -P string
-        filename list or username
-  -U string
-        filename list or username
-  -i string
-        ip addr 192.168.1.1/24，192.168.1-255，192.168.1.1
+./main --help</br>
+  -P string</br>
+        filename list or username</br>
+  -U string</br>
+        filename list or username</br>
+  -i string</br>
+        ip addr 192.168.1.1/24，192.168.1-255，192.168.1.1</br>
   -p int
-        port 21,22，445，3306，1433 (default 22)
+        port 21,22，445，3306，1433 (default 22)</br>
   -s string
-        service ssh，smb，mssql，mysql
+        service ssh，smb，mssql，mysql</br>
   -t int
-        thread (default 100)
+        thread (default 100)</br>
 
-./main -i 192.168.1.1/24 -p 22 -U /tmp/user.txt -P /tmp/pass.txt  -s ssh
+./main -i 192.168.1.1/24 -p 22 -U /tmp/user.txt -P /tmp/pass.txt  -s ssh</br>
 
 
 
