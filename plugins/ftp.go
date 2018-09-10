@@ -7,7 +7,6 @@ import (
 	"time"
 )
 
-
 func ScanFtp(s model.ScanResult) (result model.ScanResult) {
 
 	conn, err := ftp.DialTimeout(fmt.Sprintf("%v:%v", s.Hostport), time.Second*2)

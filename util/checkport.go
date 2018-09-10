@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func Portcheck(numberworks int, hostports <-chan string) chan model.ServerResult {
+func Portcheck(numberworks int, hostports <-chan string) <- chan model.ServerResult  {
 
 	var wg sync.WaitGroup
 

@@ -7,5 +7,5 @@ import (
 
 func TestMakefilelist(t *testing.T) {
 	li, _ := Makelist("/etc/passwd")
-	fmt.Println(len(li))
+	fmt.Println(li)
 }

@@ -15,14 +15,14 @@ func ScanPostgres(s model.ScanResult) (result model.ScanResult) {
 
 	db, err := sql.Open("postgres", dataSourceName)
 
-	if err := db.Ping(); err == nil{
+	if err := db.Ping(); err == nil {
 		s.Success = true
 		defer db.Close()
-		return  s
+		return s
 	}
-	util.Info("%s %s",err.Error(),s.Hostport)
+	util.Info("%s %s", err.Error(), s.Hostport)
 	s.Success = false
 
 	return s
-	
+
 }

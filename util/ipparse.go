@@ -3,7 +3,6 @@ package util
 import (
 	"errors"
 	"fmt"
-	"log"
 	"net"
 	"strconv"
 	"strings"
@@ -37,7 +36,6 @@ func Makeip(ip string) ([]string, error) {
 	} else {
 		trial := net.ParseIP(ip)
 		if trial.To4() == nil {
-			log.Panicln("ip输入不正确")
 			return iplist, errors.New("ip error")
 		}
 		iplist = append(iplist, ip)
