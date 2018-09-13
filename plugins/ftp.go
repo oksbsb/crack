@@ -9,7 +9,9 @@ import (
 
 func ScanFtp(s model.ScanResult) (result model.ScanResult) {
 
-	conn, err := ftp.DialTimeout(fmt.Sprintf("%v:%v", s.Hostport), time.Second*2)
+
+
+	conn, err := ftp.DialTimeout(fmt.Sprintf("%v", s.Hostport), time.Second*2)
 	if err == nil {
 		err = conn.Login(s.Username, s.Password)
 		if err == nil {
