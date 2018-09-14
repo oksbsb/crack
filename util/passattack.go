@@ -40,7 +40,7 @@ func attackworker(s <-chan model.ScanResult, results chan model.ScanResult) {
 		case <-ch:
 		case <-ctx.Done():
 
-			Error("%s \t time out",i.Hostport)
+			Error("%s \t time out", i.Hostport)
 		}
 		cancel()
 	}

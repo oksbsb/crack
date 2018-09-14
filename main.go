@@ -58,7 +58,7 @@ func main() {
 		defaultport = 5432
 		scan = plugins.ScanPostgres
 	default:
-		 scan = nil
+		scan = nil
 	}
 
 	if *port == "" {
@@ -69,8 +69,7 @@ func main() {
 	}
 	portresult = util.Portcheck(t, ipli)
 
-
-	 if scan == nil {
+	if scan == nil {
 		for _ = range portresult {
 		}
 		os.Exit(1)
@@ -78,7 +77,7 @@ func main() {
 
 	go makchan(user, pass, scan)
 
-	f, err := os.OpenFile("result.txt",  os.O_RDWR|os.O_CREATE|os.O_APPEND, 0644)
+	f, err := os.OpenFile("result.txt", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0644)
 	if err != nil {
 		panic(err)
 	}
@@ -87,7 +86,7 @@ func main() {
 	resutlt := util.Passattack(t, passchan)
 	for i := range resutlt {
 		if i.Success == true {
-			f.WriteString(fmt.Sprintf("%s\t%s\t%s\r\n",i.Hostport,i.Username,i.Password))
+			f.WriteString(fmt.Sprintf("%s\t%s\t%s\r\n", i.Hostport, i.Username, i.Password))
 		}
 
 	}

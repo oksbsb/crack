@@ -24,7 +24,7 @@ func ScanSmb(s model.ScanResult) (result model.ScanResult) {
 		Domain:      "",
 		Workstation: "",
 	}
-	util.Info("start login  %s %s %s", s.Hostport, s.Username, s.Password)
+	util.Info("start login SMB  %s %s %s", s.Hostport, s.Username, s.Password)
 	session, err := smb.NewSession(options, false)
 	if err == nil {
 		session.Close()

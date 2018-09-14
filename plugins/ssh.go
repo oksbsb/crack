@@ -15,13 +15,13 @@ func ScanSsh(s model.ScanResult) (result model.ScanResult) {
 		Auth: []ssh.AuthMethod{
 			ssh.Password(s.Password),
 		},
-		Timeout: time.Second * 5,
+		Timeout: time.Second * 8,
 	}
-	util.Info("start login  %s %s %s", s.Hostport, s.Username, s.Password)
+	util.Info("start login  SSH   %s %s %s", s.Hostport, s.Username, s.Password)
 	c, err := ssh.Dial("tcp", fmt.Sprintf("%v", s.Hostport), config)
 	if err == nil {
 		defer c.Close()
-		//util.Success("Found SSH %s %s %s", s.Hostport, s.Username, s.Password)
+		util.Success("Found SSH %s %s %s", s.Hostport, s.Username, s.Password)
 		s.Success = true
 		return s
 	}
