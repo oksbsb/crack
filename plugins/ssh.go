@@ -21,7 +21,7 @@ func ScanSsh(s model.ScanResult) (result model.ScanResult) {
 	c, err := ssh.Dial("tcp", fmt.Sprintf("%v", s.Hostport), config)
 	if err == nil {
 		defer c.Close()
-		util.Success("Found SSH %s %s %s", s.Hostport, s.Username, s.Password)
+		//util.Success("Found SSH %s %s %s", s.Hostport, s.Username, s.Password)
 		s.Success = true
 		return s
 	}
