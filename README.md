@@ -9,7 +9,7 @@ go build main.go </br>
 ## help
 
 ```
-➜  crack git:(master) ✗ go run main.go -i 133.96.1.1/16  --help               
+➜  crack git:(master) ✗ go run main.go    --help               
 -P string
     filename list or username
 -U string
